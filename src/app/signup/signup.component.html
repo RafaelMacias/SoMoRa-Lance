@@ -1,4 +1,4 @@
-<body>
+
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -11,12 +11,12 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form (submit)="signUp()">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre completo">
+                            <input type="text" [(ngModel)]="user.nombre" name="nombrecompleto" placeholder="Nombre Completo" required autofocus>
                             
                         </div>
 
@@ -24,7 +24,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Edad">
+                            <input type="date" [(ngModel)]="user.fecha" name="fecha" placeholder="fecha Nacimiento" required>
                             
                         </div>
                         
@@ -32,7 +32,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="email" [(ngModel)]="user.email" name="email" placeholder="email" required autofocus>
                             
                         </div>
 
@@ -40,22 +40,25 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Contraseña">
+                            <input type="password" [(ngModel)]="user.password" name="password" placeholder="password" required>
                         </div>
 
-                        <div class="input-group form-group">
+                        <!-- <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="confirm_password" class="form-control" placeholder="Confirmar Contraseña">
-                        </div>
+                            <input type="confirm_password" [(ngModel)]="user.confirmarPassword" class="form-control" placeholder="Confirmar Contraseña" required>
+                        </div> -->
                         <div class="row align-items-center remember">
                             <input type="checkbox">Recibir correos de SoMoRa Lance
                         </div>
                         
-                        <div class="form-group cent">
-                            <input type="submit" value="Registrate" class="btn  login_btn">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Iniciar Session
+                            </button>
                         </div>
+                        
                     </form>
                 </div>
                 <div class="card-footer">
@@ -66,4 +69,4 @@
     </div>
     
     
-</body>
+

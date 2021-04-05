@@ -8,6 +8,9 @@ import {TareasPrivadasComponent} from './tareas-privadas/tareas-privadas.compone
 import {SignupComponent} from './signup/signup.component'
 import {LoginComponent} from './login/login.component'
 
+import { AuthGuard } from './auth.guard'
+import { from } from 'rxjs';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'privadas',
-    component:TareasPrivadasComponent
+    component:TareasPrivadasComponent,
+    canActivate: [AuthGuard]  //* protege la ruta privada
   },
   {
     path: 'signup',
@@ -33,12 +37,6 @@ const routes: Routes = [
   }
 
 ];
-
-// RouterModule.forRoot([
-//   {path: '', component: HomeComponent},
-//   {path: 'login', component: LoginComponent},
-//   {path: 'signup', component: SignupComponent},
-// ]),
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

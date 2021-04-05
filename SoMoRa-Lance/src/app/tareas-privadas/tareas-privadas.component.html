@@ -1,12 +1,16 @@
-<div class="container">
-    <div class="row">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Perfil</h3>
-                </div>
-            </div>
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1>Tareas Privadas</h1>
+              </div>
+              <div class="col-lg-8 align-self-baseline pt-5">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let tarea of tareas">
+                        {{tarea._id}} - {{tarea.name}}: {{tarea.description}}
+                    </li>
+                </ul>
+            </div>     
         </div>
     </div>
-</div>
-
+</header>

@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class TareasService {
 
-  private URL = 'http://localhost:3000/api'
+  private URL = '/api'
   constructor(private http: HttpClient) { }
 
   getTareas(){

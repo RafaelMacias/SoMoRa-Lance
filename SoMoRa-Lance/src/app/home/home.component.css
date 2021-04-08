@@ -10077,7 +10077,7 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgb(3 12 21 / 58%) 0%, rgb(19 17 16 / 82%) 100%), url("/assets/logos/logos1/logo4.png");
+  background: linear-gradient(to bottom, rgb(3 12 21 / 58%) 0%, rgb(19 17 16 / 82%) 100%), url("/assets/logos/logos1/fondo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

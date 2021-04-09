@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 
-require('../backend/src/index')
+// require('../backend/src/index')
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/somoralancer'));

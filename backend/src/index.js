@@ -11,5 +11,7 @@ app.use(express.json()); //?para leer los datos quue se estan resiviendo
 app.use('/api', require('./routes/index'))
 
 
-app.listen(process.env.PORT || 8080);
+app.set('port', process.env.PORT || 8080);
+
+// app.listen(process.env.PORT || 8080);
 console.log('Servidor en el puerto 8080');
